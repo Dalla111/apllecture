@@ -33,12 +33,13 @@
             }
     
             .dropdown {
-                margin: 10px 0;
+                margin: 0; /* No space between buttons initially */
                 background-color: rgba(255, 255, 255, 0.9);
                 color: #333;
                 border-radius: 10px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 overflow: hidden;
+                transition: margin-bottom 0.3s ease;
             }
     
             .dropdown-header {
@@ -60,22 +61,12 @@
                 max-height: 0;
                 overflow-y: hidden;
                 background-color: rgba(93, 233, 83, 0.8);
-                transition: max-height 0.5s ease, visibility 0.5s;
-                visibility: hidden;
-                position: relative;
+                transition: max-height 0.5s ease;
             }
     
             .dropdown-content.open {
-                max-height: 500px;
-                visibility: visible;
+                max-height: 500px; /* Adjust based on your content size */
                 overflow-y: auto;
-            }
-    
-            @media (max-width: 768px) {
-                .dropdown-content {
-                    max-height: calc(100vh - 100px);
-                    overflow-y: auto;
-                }
             }
     
             .dropdown-content a {
@@ -99,29 +90,6 @@
             .dropdown-content::-webkit-scrollbar-thumb {
                 background-color: #62a4e9;
                 border-radius: 10px;
-            }
-    
-            .bottom-button {
-                position: fixed;
-                bottom: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-                padding: 10px 20px;
-                font-size: 16px;
-                color: white;
-                background-color: #30c6f7;
-                border: none;
-                border-radius: 10px;
-                text-align: center;
-                text-decoration: none;
-                cursor: pointer;
-                transition: background-color 0.3s, transform 0.2s;
-                z-index: 1000;
-            }
-    
-            .bottom-button:hover {
-                background-color: #0056b3;
-                transform: scale(1.1);
             }
     
             @keyframes glow {
@@ -190,6 +158,7 @@
             });
         </script>
     </head>
+    
     
     
 <body>
