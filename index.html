@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>APL100 Course Material</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('https://imgs.search.brave.com/veemZ7bpeX3eQ6Nd-MU_5_MyeKB4CHzGo_-aZJx5JFM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNy8x/MC8zMS8xNy80NC9j/aGVycmllcy0yOTA1/OTY0XzY0MC5qcGc');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em; 
+            color: #FFD700; 
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), 0 0 20px #FF4500; 
+            animation: glow 1.5s infinite alternate; 
+            background: linear-gradient(90deg, #FF6347, #FFD700, #32CD32); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin: 20px 0;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        h3 {
+            text-align: center;
+            color: #f3c266;
+        }
+
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: #32CD32;
+        }
+
+        .dropdown {
+            margin: 10px 0;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .dropdown-header {
+            padding: 15px;
+            font-size: 1.2em;
+            font-weight: bold;
+            background-color: #62a4e9;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-header:hover {
+            background-color: #0056b3;
+        }
+
+        .dropdown-content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: rgba(93, 233, 83, 0.8);
+            transition: max-height 0.5s ease;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            background-color: #0a5068;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dropdown-content a:hover {
+            background-color: #0056b3;
+        }
+
+        .dropdown.open .dropdown-content {
+            max-height: 500px; /* Adjust based on content length */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+    </style>
+    <script>
+        function toggleDropdown(id) {
+            const dropdown = document.getElementById(id);
+            dropdown.classList.toggle('open');
+        }
+    </script>
+</head>
+<body>
+    <h1>APL100 Course Material</h1>
+    <div class="container">
+        <div class="section">
+            <h2>Lectures</h2>
+            <div class="dropdown" id="prof-sv-dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown('prof-sv-dropdown')">Prof. S.V. Veeravalli</div>
+                <div class="dropdown-content">
+                    <a href="https://drive.google.com/file/d/1qWQOY6qGjQK29_EVmEimim0IjJS-tLyt/view" target="_blank">Lecture 1</a>
+                    <a href="https://drive.google.com/file/d/1kDHm22dqnCHIAihJLgpT1Qu9k1-yQUjW/view" target="_blank">Lecture 2</a>
+                    <a href="https://drive.google.com/file/d/12FFDS6xvd1bR4CLZuB1ASUJuAG2Zl3yw/view" target="_blank">Lecture 3</a>
+                    <a href="https://drive.google.com/file/d/1B4P4zJMA-G30dXB-WesD1SReyKkk1dZH/view" target="_blank">Lecture 4</a>
+                    <a href="https://drive.google.com/file/d/1plKnG5kwVyKI3nqpkEeVukLIM4RV7voB/view" target="_blank">Lecture 5</a>
+                    <a href="https://drive.google.com/file/d/1pWGOLqQfDuUEi6aS56WnQMDCuEsfGNA1/view" target="_blank">Lecture 6</a>
+                    <a href="https://drive.google.com/file/d/1Lrq4_qiFlydeiJt7hjKmX4QEims2yJKG/view" target="_blank">Lecture 7</a>
+                    <a href="https://drive.google.com/file/d/1dy5AO2aNnJqmj-MQW66NUiCXrdwOIzkr/view" target="_blank">Lecture 8</a>
+                    <a href="https://drive.google.com/file/d/1FE7eKGLxM-0BkhZae9SALxWc45Y8rR1N/view" target="_blank">Lecture 9</a>
+                    <a href="https://drive.google.com/file/d/1-c01gIzw51fNuEbwElb0lANSnuggz4f3/view" target="_blank">Lecture 10</a>
+                    <a href="https://drive.google.com/file/d/1YEpigqhOOAOybIUOgtk0IL9c4zizXLYW/view" target="_blank">Lecture 11</a>
+                    <a href="https://drive.google.com/file/d/1-vY-7be1W4eKSp7RSnB-8FWGi9XEGJRU/view" target="_blank">Lecture 12</a>
+                    <a href="https://drive.google.com/file/d/1IkV1BaF2cdJ72iQSs3JSSPdpWTldajN-/view" target="_blank">Lecture 13</a>
+                    <a href="https://drive.google.com/file/d/1PwpIEhFx4e7lzrF76mxrtTQewnuPMwBw/view" target="_blank">Lecture 14</a>
+                    <a href="https://drive.google.com/file/d/1VHY2sqkFGKORXxnMGovXl4xzlr3ePy8t/view" target="_blank">Lecture 15</a>
+                    <a href="https://drive.google.com/file/d/1QOkZj4Wl2nZiJNl5apFwGe3p4WHQ99_k/view" target="_blank">Lecture 16</a>
+                    <a href="https://drive.google.com/file/d/1JQS_pDUDtT5QOfFIa6z8MvuGkj7Xh90Q/view" target="_blank">Lecture 17</a>
+                    <a href="https://drive.google.com/file/d/1923ykjIeGtLsR6dHYo_ejuF603ETw4jd/view" target="_blank">Lecture 18</a>
+                    <a href="https://drive.google.com/file/d/1Z--6zzYxsaBUgim4YJt3WOa1BuieM4kd/view" target="_blank">Lecture 19</a>
+                    <a href="https://drive.google.com/file/d/1Bw-xIp3tazMsXvTk3aOON5PtnBEM1VFq/view" target="_blank">Lecture 20</a>
+                    <a href="https://drive.google.com/file/d/1ifouRCrb4iAWJvgY4dRr8sErZmsNS1j9/view" target="_blank">Lecture 21</a>
+                    <a href="https://drive.google.com/file/d/1sNAE7XuHPFSqZCfSpV_8lWcwG-sE4ZXw/view" target="_blank">Lecture 22</a>
+                    <a href="https://drive.google.com/file/d/1BBJ_UA5vEYzqABZ-v-tofKtl-w4jiZG_/view" target="_blank">Lecture 23</a>
+                    <a href="https://drive.google.com/file/d/1bUvN6X1wouEKat3UEX_lezFCpA_hqnqC/view" target="_blank">Lecture 24</a>
+                    <a href="https://drive.google.com/file/d/1Ww5RdSxwUUZeA7YQHsyzL3KBdJjpxcCo/view" target="_blank">Lecture 25</a>
+                    <a href="https://drive.google.com/file/d/1Jck32-josi1tbRKAkeFgi5Ad2SBN-wlZ/view" target="_blank">Lecture 26</a>
+                    <a href="https://drive.google.com/file/d/1JSyCvIIKY7H-OdFwqLHsFIdgGeheL7Dz/view" target="_blank">Lecture 27</a>
+                </div>
+            </div>
+
+            <div class="dropdown" id="prof-hari-dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown('prof-hari-dropdown')">Prof. Hari Vemuri</div>
+                <div class="dropdown-content">
+                    <a href="https://drive.google.com/file/d/1m3NvyYqeNGD1wyc2meDqEynhLcmELvSL/view" target="_blank">Lecture 1</a>
+                    <a href="https://drive.google.com/file/d/11qtLxZO9AtH8-duUzRolAIVt5ORUy7NM/view" target="_blank">Lecture 2</a>
+                    <a href="https://drive.google.com/file/d/1Pvvc8liem7ACoSuI2ziDj1k4Gsq4UFgQ/view" target="_blank">Lecture 3</a>
+                    <a href="https://drive.google.com/file/d/1DsSQ6Am87wvYCt3FA2VhFPi2IAbIFykP/view" target="_blank">Lecture 4</a>
+                    <a href="https://drive.google.com/file/d/1WeQsD7yUYcvvaHqUJLPdV-NuQQr0jz3X/view" target="_blank">Lecture 5</a>
+                    <a href="https://drive.google.com/file/d/1W3PiWuXWlVqsKrWMkxDYu9h4ynkb2wxK/view" target="_blank">Lecture 6</a>
+                    <a href="https://drive.google.com/file/d/1g-l2qyAbgiMtnYEOFVt9-5I3RHQCiZhr/view" target="_blank">Lecture 7</a>
+                    <a href="https://drive.google.com/file/d/1KcbOrO3gpOkuItL5pwsi8npV3A6Mn3oO/view" target="_blank">Lecture 8</a>
+                    <a href="https://drive.google.com/file/d/1hJsmB7WCtxuhcJixvcL_MbBHXVKjFtVo/view" target="_blank">Lecture 9</a>
+                    <a href="https://drive.google.com/file/d/1fRpcReSTjkR9wUyCT-vAEjOPRt0R6A2K/view" target="_blank">Lecture 10</a>
+                    <a href="https://drive.google.com/file/d/1RGtBLO2-ljgtU75KJvL4qghjSxoapNhb/view" target="_blank">Lecture 11</a>
+                    <a href="https://drive.google.com/file/d/1XPlOaS_CDuIzJlsCNNW_2WiJCjI3PWNf/view" target="_blank">Lecture 12</a>
+                    <a href="https://drive.google.com/file/d/1CVtehHY2Hq4AMuPrnqQcXQq4vVSqmn9I/view" target="_blank">Lecture 13</a>
+                    <a href="https://drive.google.com/file/d/1a7IzzKD7cFnc8H8BSDyGsuow09njxD1E/view" target="_blank">Lecture 14</a>
+                    <a href="https://drive.google.com/file/d/1y9dLOr1hHX4mnd73Dh-XrNNrzv3QP1q_/view" target="_blank">Lecture 15</a>
+                    <a href="https://drive.google.com/file/d/10FCIVhVfAL_kjxvoD1YmPIVQEO012ity/view" target="_blank">Lecture 16</a>
+                    <a href="https://drive.google.com/file/d/1E4JfXfWh3txyiIcjdhJIROk3CtdjgeQr/view" target="_blank">Lecture 17</a>
+                    <a href="https://drive.google.com/file/d/1fVQIyXHr32zF01I4JuPPSdZY9xW-jx0g/view" target="_blank">Lecture 18</a>
+                    <a href="https://drive.google.com/file/d/1FZD8No_tw7uy1fd26yjZIwEEGoo5S9Jx/view" target="_blank">Lecture 19</a>
+                    <a href="https://drive.google.com/file/d/1HcshjRHs8a-ETtZGn7jCzLZwSO8jm77J/view" target="_blank">Lecture 20</a>
+                    <a href="https://drive.google.com/file/d/1X350lx3RFnqWnOUY_BHsNFw1phSTMISO/view" target="_blank">Lecture 21</a>
+                    <a href="https://drive.google.com/file/d/14HazegPxmDE3swUa-XubcuLJ9ERgJu-B/view" target="_blank">Lecture 22</a>
+                    <a href="https://drive.google.com/file/d/1R6fShv6YjSuyP5YT_MO4Dm2h-2bApUVp/view" target="_blank">Lecture 23</a>
+                    <a href="https://drive.google.com/file/d/1xHd7ikhhwmAz73lhDPKy4g4N0ztXUAaF/view" target="_blank">Lecture 24</a>
+                    <a href="https://drive.google.com/file/d/1q8VoItz2G6703gWD9pVeZ5-ylJEsaYa7/view" target="_blank">Lecture 25</a>
+                    <a href="https://drive.google.com/file/d/1k_wBk0lHUb6-Q0KLwHXqpCVP452qzEn5/view" target="_blank">Lecture 26</a>
+                    <a href="https://drive.google.com/file/d/1JM85rzf8DYPBoC6c1sEBpBelkpXdvG01/view" target="_blank">Lecture 27</a>
+                    <a href="https://drive.google.com/file/d/1KU3EC27ZORFOSWDGbOQr7ZEJ6GMwT-wy/view" target="_blank">Lecture 28</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Tutorial Sheets</h2>
+            <div class="dropdown" id="tutorials-dropdown-solution-a">
+                <div class="dropdown-header" onclick="toggleDropdown('tutorials-dropdown-solution-a')">Tutorial Sheets</div>
+                <div class="dropdown-content">
+                    <a href="https://drive.google.com/file/d/1DvwyezjsQCAai1zdEMnC9zBYgmd7uBzo/view?usp=drive_link" target="_blank">Tutorial 0</a>
+                    <a href="https://drive.google.com/file/d/1-loJ-42CB0_uQLZNQXrqnjtSwzXYQxRH/view" target="_blank">Tutorial 1</a>
+                    <a href="https://drive.google.com/file/d/1Bldq8uOg8-6j4cT2rJmGZw5Sa3jeCjez/view" target="_blank">Tutorial 2</a>
+                    <a href="https://drive.google.com/file/d/1HEk9W-ZWAb2fURBffhZSWQHJ9JvOGlus/view" target="_blank">Tutorial 3</a>
+                    <a href="https://drive.google.com/file/d/13DWTqlue7B4XKN91ttG5Lo69pa6vdE9B/view" target="_blank">Tutorial 4</a>
+                    <a href="https://drive.google.com/file/d/15cMB45NlhMwQnAcRjiao9sHuv4rqCh_w/view" target="_blank">Tutorial 5A</a>
+                    <a href="https://drive.google.com/file/d/1VS5giW6Ibp0gKGLi7_ma6mW_15tfe-C2/view" target="_blank">Tutorial 5B</a>
+                    <a href="https://drive.google.com/file/d/1oDBnWNmQJcrmOtGwSBJSx5KIcYUkZ-Ig/view" target="_blank">Tutorial 6A</a>
+                    <a href="https://drive.google.com/file/d/1W-RxMtuB2_16a8t7zi_0IJHvELEcmFhO/view" target="_blank">Tutorial 6B</a>
+                    <a href="https://drive.google.com/file/d/10bajUC3JXhiUs1InRaW9uIHSa0glIFOJ/view" target="_blank">Tutorial 7A</a>
+                    <a href="https://drive.google.com/file/d/1sAfAiZQcUfTPYa5JL5hsR1RXhOFmqPCh/view" target="_blank">Tutorial 7B</a>
+                    <a href="https://drive.google.com/file/d/1e0aa9Jwbf3SC_3Li8yNRdQLiHmFrAAKb/view" target="_blank">Tutorial 8A</a>
+                    <a href="https://drive.google.com/file/d/1vtuGGmBO1Nvvfk_mLRBe7U7XJrdLDvrg/view" target="_blank">Tutorial 8B</a>
+                    <a href="https://drive.google.com/file/d/15RJ8gjfBlzcItqLkI7diOed-fYTmxEdc/view" target="_blank">Tutorial 9A</a>
+                    <a href="https://drive.google.com/file/d/1bDWPZKand8h2ptp4ZhdyFvUkWEyuK3pg/view" target="_blank">Tutorial 9B</a>
+                    <a href="https://drive.google.com/file/d/1yNrPL9iEKXw2jPTSVv1UjSrczHnsQfHO/view" target="_blank">Tutorial 10</a>
+                    <a href="https://drive.google.com/file/d/1hUeA1pNRw-S5stIA_lQ-doKBjWwFLimZ/view" target="_blank">Tutorial 11</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>solution part A</h2>
+            <div class="dropdown" id="tutorials-dropdown-solution-b">
+                <div class="dropdown-header" onclick="toggleDropdown('tutorials-dropdown-solution-b')">Solution Part A</div>
+                <div class="dropdown-content">
+                    <a href="https://drive.google.com/file/d/1Ub0Usv9IUAtWyyHrsJ9exfqFw29lx6aK/view" target="_blank">Tutorial 0</a>
+                    <a href="https://drive.google.com/file/d/1Ym_96I560xNjqr7YDR4Sg3ZGE4A4thlB/view" target="_blank">Tutorial 1A</a>
+                    <a href="https://drive.google.com/file/d/1FoAmwHqzGF6bCBesl7i5Ug_Xj-tuOSVT/view" target="_blank">Tutorial 2A</a>
+                    <a href="https://drive.google.com/file/d/1eBoOYYPFWIp5k4-2MxsMd4vabgtNIkKn/view" target="_blank">Tutorial 3A</a>
+                    <a href="https://drive.google.com/file/d/19BawJfNpKNvGbxmfuAuWdK60rHPwZlgN/view" target="_blank">Tutorial 4A</a>
+                    <a href="https://drive.google.com/file/d/1Eo8KLuevG1AIDh-mg_nA-RNKvamlwEYa/view" target="_blank">Tutorial 5A</a>
+                    <a href="https://drive.google.com/file/d/1cgseRbYTrg7eK2yH8fzLVNxUwpgVZCjJ/view" target="_blank">Tutorial 6A</a>
+                    <a href="https://drive.google.com/file/d/10d0qcjIqyVKm9uc0qUROwXBafHR-082G/view" target="_blank">Tutorial 7A</a>
+                    <a href="https://drive.google.com/file/d/15Px0BT53PeieWmC00RNoLaVsj5HSdpJT/view" target="_blank">Tutorial 8A</a>
+                    <a href="https://drive.google.com/file/d/1mrISD4HJnX2RXVFACFHZUxKkUUYez8C6/view" target="_blank">Tutorial 9A</a>
+                    <a href="https://drive.google.com/file/d/1zsg6eeYdsabLEKD3EDmbQ4eGGfImkLeo/view" target="_blank">Tutorial 10</a>
+                    <a href="https://drive.google.com/file/d/1XYzSYzQIdQcbZ2_YVJHf-Ba9cmECJ0AD/view" target="_blank">Tutorial 11</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>solution part B</h2>
+            <div class="dropdown" id="tutorials-dropdown">
+                <div class="dropdown-header" onclick="toggleDropdown('tutorials-dropdown')">solution part B</div>
+                <div class="dropdown-content">
+                    <a href="https://drive.google.com/file/d/17_I3xdxjqxue1auKqdYMjt5S2iXZy-GJ/view" target="_blank">Tutorial 1B</a>
+                    <a href="https://drive.google.com/file/d/1aHVbjXFrMboEsHdeogfPVIFrAd9yPdjr/view" target="_blank">Tutorial 2B</a>
+                    <a href="https://drive.google.com/file/d/1TGYKPTSaqDCzuPQuY-eIfoLnE8mPcba-/view" target="_blank">Tutorial 3B</a>
+                    <a href="https://drive.google.com/file/d/1JzS1f9W0yzHyQa2QCUdS9QcckU9YJ-LC/view" target="_blank">Tutorial 4B</a>
+                    <a href="https://drive.google.com/file/d/1Ef7Mr9ES-M3hz9InVsiAWQx1CpE6WV9n/view" target="_blank">Tutorial 5B</a>
+                    <a href="https://drive.google.com/file/d/1cpQd5u9PPPW_t5oSnnbu3fU0mbyKT5ir/view" target="_blank">Tutorial 6B</a>
+                    <a href="https://drive.google.com/file/d/1G83auL8ISkCyKioJbBU5Q8mFDQle3Ng8/view" target="_blank">Tutorial 7B</a>
+                    <a href="https://drive.google.com/file/d/1SVlkI2yMtSF-5c6FKutg2alDdjGCC05-/view" target="_blank">Tutorial 8B</a>
+                    <a href="https://drive.google.com/file/d/1jBsSeAa-0MffSF-pT-DKWq7OqgjYMzG4/view" target="_blank">Tutorial 9B</a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <h3>DEVELOPED BY MONIL</h3>
+            <p><a href="mailto:monilsavaliya416@gmail.com" style="color: white;">FOR ANY CHANGES CONTACT: MONIL</a></p>
+            <p>&copy; 2025</p>
+        </footer>
+    </body>
+    </html>
