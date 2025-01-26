@@ -60,18 +60,20 @@
                 max-height: 0;
                 overflow-y: hidden;
                 background-color: rgba(93, 233, 83, 0.8);
-                transition: max-height 0.5s ease;
+                transition: max-height 0.5s ease, visibility 0.5s;
+                visibility: hidden;
                 position: relative;
             }
     
-            .dropdown.open .dropdown-content {
-                max-height: 500px; /* Default for desktop */
+            .dropdown-content.open {
+                max-height: 500px;
+                visibility: visible;
                 overflow-y: auto;
             }
     
             @media (max-width: 768px) {
                 .dropdown-content {
-                    max-height: calc(100vh - 100px); /* Leave some space for header/footer */
+                    max-height: calc(100vh - 100px);
                     overflow-y: auto;
                 }
             }
@@ -90,7 +92,6 @@
                 background-color: #0056b3;
             }
     
-            /* Optional Scrollbar Styling */
             .dropdown-content::-webkit-scrollbar {
                 width: 6px;
             }
@@ -131,34 +132,65 @@
                     text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FF4500, 0 0 40px #FF4500;
                 }
             }
+    
             h1 {
-            text-align: center;
-            color: #de830c;
-            font-size: 24px;
-        }
-
-        h2 {
-            text-align: center;
-            color: #333;
-        }
-        h3 {
-            text-align: center;
-            color: #989090;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-        }
+                text-align: center;
+                color: #de830c;
+                font-size: 24px;
+            }
+    
+            h2 {
+                text-align: center;
+                color: #333;
+            }
+    
+            h3 {
+                text-align: center;
+                color: #989090;
+            }
+    
+            footer {
+                text-align: center;
+                margin-top: 20px;
+                font-size: 14px;
+            }
         </style>
     
         <script>
-            function toggleDropdown(id) {
-                const dropdown = document.getElementById(id);
-                dropdown.classList.toggle('open');
-            }
+            document.addEventListener('DOMContentLoaded', function () {
+                const dropdowns = document.querySelectorAll('.dropdown');
+    
+                dropdowns.forEach(dropdown => {
+                    const header = dropdown.querySelector('.dropdown-header');
+                    const content = dropdown.querySelector('.dropdown-content');
+    
+                    // Toggle the current dropdown and close others
+                    header.addEventListener('click', () => {
+                        const isOpen = content.classList.contains('open');
+                        closeAllDropdowns();
+                        if (!isOpen) {
+                            content.classList.add('open');
+                        }
+                    });
+                });
+    
+                // Close all dropdowns
+                function closeAllDropdowns() {
+                    document.querySelectorAll('.dropdown-content').forEach(content => {
+                        content.classList.remove('open');
+                    });
+                }
+    
+                // Close dropdowns on clicking outside
+                document.addEventListener('click', (event) => {
+                    if (!event.target.closest('.dropdown')) {
+                        closeAllDropdowns();
+                    }
+                });
+            });
         </script>
     </head>
+    
     
 <body>
     <h1>APL100 Course Material</h1>
