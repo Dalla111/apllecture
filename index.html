@@ -108,6 +108,36 @@
             background-color: rgba(0, 0, 0, 0.6);
             color: white;
         }
+        .bottom-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            color: rgb(255, 255, 255);
+            background-color: #30c6f7;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .bottom-button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 18px;
+            }
+        }
+    </style>
     </style>
     <script>
         function toggleDropdown(id) {
@@ -255,5 +285,6 @@
             <p><a href="mailto:monilsavaliya416@gmail.com" style="color: white;">FOR ANY CHANGES CONTACT: MONIL</a></p>
             <p>&copy; 2025</p>
         </footer>
+        <a href="https://dalla111.github.io/homepage/" class="bottom-button">Home</a>
     </body>
     </html>
